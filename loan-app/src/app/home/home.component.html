@@ -1,0 +1,114 @@
+<!--
+ * Title: home.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 28, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Layout Pages video by Professor Krasso (https://www.youtube.com/watch?v=9AsogopS9YM)
+ */
+-->
+
+<div>
+  <!-- Row for the page title -->
+  <div class="row">
+    <div class="col-8 m-auto">
+      <h2 class="page-title text-center m-4 mb-3">Welcome to Loan App!</h2>
+    </div>
+  </div>
+  <!-- Line breaks for spacing -->
+  <br />
+  <br />
+
+  <!-- Main content wrapped in a mat-card -->
+  <mat-card class="mat-elevation-z8 dk-brown-bg">
+    <mat-card-content>
+      <!-- Flex layout for two sections -->
+      <div fxLayout="row wrap">
+        <!-- Left section for input form -->
+        <div fxFlex>
+          <mat-card class="mat-elevation-z0 dk-brown-bg">
+            <mat-card-title></mat-card-title>
+
+            <mat-card-content class="center">
+              <form fxLayout="column">
+                <div></div>
+
+                <!-- Loan Amount input field -->
+                <mat-form-field
+                  fxFlex
+                  appearance="fill"
+                  class="input-container"
+                >
+                  <mat-label class="font-white">Loan Amount:</mat-label>
+                  <input
+                    type="text"
+                    required
+                    name="txtLoanAmt"
+                    id="txtLoanAmt"
+                    placeholder="ex. 150000"
+                    matInput
+                  />
+                </mat-form-field>
+
+                <!-- Interest Rate input field -->
+                <mat-form-field
+                  fxFlex
+                  appearance="fill"
+                  class="input-container"
+                >
+                  <mat-label class="font-white">Interest Rate:</mat-label>
+                  <input
+                    type="text"
+                    required
+                    name="txtInterestRate"
+                    id="txtInterestRate"
+                    placeholder="ex. 4.5"
+                    matInput
+                  />
+                </mat-form-field>
+
+                <!-- Number of Years input field -->
+                <mat-form-field appearance="fill">
+                  <mat-label class="font-white">Number of Years:</mat-label>
+                  <input
+                    type="text"
+                    required
+                    name="txtNumYears"
+                    id="txtNumYears"
+                    placeholder="ex. 30"
+                    matInput
+                  />
+                </mat-form-field>
+
+                <br />
+
+                <!-- Calculate button -->
+                <button type="submit" mat-raised-button color="accent">
+                  Calculate
+                </button>
+              </form>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!-- Right section for results -->
+        <div fxFlex>
+          <mat-card class="mat-elevation-z0 dk-brown-bg">
+            <mat-card-title></mat-card-title>
+            <mat-card-content>
+              <form fxLayout="column">
+                <!-- Monthly payment result -->
+                <h1>Your monthly payment:</h1>
+                <h2>$0.00</h2>
+                <br />
+                <br />
+                <!-- Total interest paid result -->
+                <h1>Total interest paid:</h1>
+                <h2>$0.00</h2>
+              </form>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </mat-card-content></mat-card
+  >
+</div>

@@ -1,0 +1,79 @@
+<!--
+ * Title: contact.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 28, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Navigation and Layout with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=Wif3MsDN7Pg)
+-->
+
+<div>
+  <!-- Row for the page title -->
+  <div class="row">
+    <div class="col-8 m-auto">
+      <h2 class="page-title text-center m-4 mb-3">
+        Welcome to the Contact Us page
+      </h2>
+    </div>
+  </div>
+
+  <!-- Line breaks for spacing -->
+  <br />
+  <br />
+
+  <!-- Container for contact information -->
+  <div class="d-flex justify-content-around">
+    <div class="text-center">
+      <!-- Flex layout for address and contact cards -->
+      <div fxLayout="row wrap">
+        <!-- Address card -->
+        <div fxFlex>
+          <mat-card class="mat-elevation-z0 brown-bg">
+            <mat-card-title class="card-title-icon">
+              <mat-icon color="accent">navigation</mat-icon>
+            </mat-card-title>
+            <br />
+            <!-- Card content with address information -->
+            <mat-card-content class="align-center">
+              <p>3531 Main Street</p>
+              <p>Parkville, MO 64152</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <!-- Contact card -->
+        <div fxFlex>
+          <mat-card class="mat-elevation-z0 brown-bg">
+            <mat-card-title class="card-title-icon">
+              <mat-icon color="accent">phone</mat-icon>
+            </mat-card-title>
+            <br />
+            <!-- Card content with contact information -->
+            <mat-card-content class="align-center">
+              <p>Direct: 816-867-5309</p>
+              <p>Toll-Free: 1-888-867-5309</p>
+              <p>Fax: 816-555-7396</p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <!-- Line breaks for spacing -->
+      <br />
+      <br />
+      <br />
+
+      <!-- Text with centered alignment -->
+      <div fxLayout="column">
+        <p style="text-align: center">
+          Thank you for choosing Loan App for all your loan calculation needs.
+          We look forward to helping you make informed decisions and achieve
+          financial freedom.
+        </p>
+        <p style="text-align: center">
+          If you have any questions or need immediate assistance, please don't
+          hesitate to call us. Our team is here to assist you.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

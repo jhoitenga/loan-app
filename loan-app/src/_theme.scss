@@ -1,0 +1,22 @@
+/**
+ * Title: _theme.scss
+ * Author: Jennifer Hoitenga
+ * Date: September 28, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Custom Angular Material Themes video by Professor Krasso (https://www.youtube.com/watch?v=J2RHvuYFna4)
+ */
+
+// Custom Theming for Angular Material
+@import "~@angular/material/theming";
+@include mat-core();
+
+// Define custom colors
+$custom-primary: mat-palette($mat-brown, 900);
+$custom-accent: mat-palette($mat-amber, 500);
+$custom-warn: mat-palette($mat-red);
+$active-link-color: mat-color($mat-amber, 400);
+
+// Create a custom theme using custom colors
+$custom-theme: mat-light-theme($custom-primary, $custom-accent, $custom-warn);
+
+@include angular-material-theme($custom-theme);

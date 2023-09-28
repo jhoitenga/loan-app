@@ -1,0 +1,113 @@
+/* Importing the theme stylesheet */
+@import "_theme.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+* {
+  font-family: "Mooli", sans-serif;
+}
+
+body {
+  background-color: #726255;
+}
+
+.navbar-brand {
+  color: mat-color($custom-accent);
+  font-size: 20px;
+}
+
+.navbar {
+  background-color: mat-color($custom-primary);
+  color: mat-color($custom-accent);
+  padding: 15px 20px 10px 20px;
+  font-size: 16px;
+}
+
+.nav-link {
+  color: mat-color($custom-accent);
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.router-link-active {
+  color: red !important;
+}
+
+.page-title {
+  color: mat-color($custom-accent);
+  font-size: 25px !important;
+}
+
+.mat-icon {
+  font-size: 40px;
+}
+
+.brown-bg {
+  background-color: #726255;
+}
+
+.dk-brown-bg {
+  background-color: #706156;
+}
+
+h1 {
+  color: mat-color($custom-accent);
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: 48px !important;
+  text-align: center;
+}
+
+h3 {
+  color: white;
+  font-size: 26px !important;
+  text-align: center;
+}
+
+p {
+  color: white;
+  font-size: 16px !important;
+}
+
+.mat-form-field {
+  margin-right: 10px;
+}
+
+.font-white {
+  color: white;
+}
+
+input::placeholder {
+  color: white !important;
+}
+
+button {
+  font-size: 18px !important;
+  letter-spacing: 0.75px;
+  padding: 5px !important;
+  font-weight: 600 !important;
+}
+
+button:hover {
+  background-color: white !important;
+}
+
+.large-button {
+  font-size: 20px;
+  padding: 16px 24px;
+}
+
+.active .nav-link {
+  color: white !important;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

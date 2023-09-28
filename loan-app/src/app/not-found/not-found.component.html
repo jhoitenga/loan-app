@@ -1,0 +1,48 @@
+<!--
+ * Title: not-found.component.html
+ * Author: Jennifer Hoitenga
+ * Date: September 28, 2023
+ * Sources Used:
+ * Angular Tutorial for Beginners: Layout Pages video by Professor Krasso (https://www.youtube.com/watch?v=9AsogopS9YM)
+-->
+
+<div fxLayout="column" fxLayoutAlign="center center">
+  <!-- Main content wrapped in a mat-card -->
+  <mat-card fxFlex class="mat-elevation-z0 brown-bg">
+    <mat-card-title>
+      <!-- Image container with attribution -->
+      <div class="img-container">
+        <figure style="display: inline-block">
+          <img src="./assets/not-found.jpg" />
+          <figcaption class="text-center p-2">
+            <small class="text-white" style="font-size: 40%">
+              <em>Image courtesy of &nbsp;</em>
+              <a
+                href="https://unsplash.com/photos/GvSLkDH7XdI"
+                target="_blank"
+                class="text-light"
+              >
+                Unsplash
+              </a>
+            </small>
+          </figcaption>
+        </figure>
+      </div>
+    </mat-card-title>
+    <mat-card-content style="text-align: center">
+      <!-- Display a message -->
+      <h3>Oops, looks like you've wandered into the badger's burrow!</h3>
+      <h3>Let's guide you back to the digital world.</h3>
+      <br />
+      <!-- Create a button with custom class for larger size with a router link to the home page -->
+      <button
+        class="large-button"
+        mat-raised-button
+        color="accent"
+        routerLink="/"
+      >
+        Return Home
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
