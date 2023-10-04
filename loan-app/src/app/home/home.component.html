@@ -8,18 +8,14 @@
 -->
 
 <div>
-  <!-- Row for the page title -->
-  <div class="row">
-    <div class="col-8 m-auto">
-      <h2 class="page-title text-center m-4 mb-3">Welcome to Loan App!</h2>
-    </div>
-  </div>
   <!-- Line breaks for spacing -->
   <br />
   <br />
 
   <!-- Main content wrapped in a mat-card -->
   <mat-card class="mat-elevation-z8 dk-brown-bg">
+    <h2 class="page-title text-center m-4 mb-3">Welcome to Loan App!</h2>
+    <br />
     <mat-card-content>
       <!-- Flex layout for two sections -->
       <div fxLayout="row wrap">
@@ -29,7 +25,7 @@
             <mat-card-title></mat-card-title>
 
             <mat-card-content class="center">
-              <form fxLayout="column">
+              <form fxLayout="column" [formGroup]="loanForm">
                 <div></div>
 
                 <!-- Loan Amount input field -->
@@ -42,12 +38,25 @@
                   <input
                     type="text"
                     required
-                    name="txtLoanAmt"
-                    id="txtLoanAmt"
+                    name="txtLoanAmount"
+                    id="txtLoanAmount"
+                    formControlName="loanAmount"
                     placeholder="ex. 150000"
                     matInput
                   />
                 </mat-form-field>
+
+                <!-- Validation Error Message -->
+                <div
+                  *ngIf="form.loanAmount.errors && form.loanAmount.touched"
+                  class="msg-error"
+                >
+                  <mat-icon class="error-icon">error_outline</mat-icon>
+                  <span class="error-text"
+                    >The loan amount should be a whole number without any
+                    decimal points, commas or symbols.</span
+                  >
+                </div>
 
                 <!-- Interest Rate input field -->
                 <mat-form-field
@@ -61,10 +70,23 @@
                     required
                     name="txtInterestRate"
                     id="txtInterestRate"
+                    formControlName="interestRate"
                     placeholder="ex. 4.5"
                     matInput
                   />
                 </mat-form-field>
+
+                <!-- Validation Error Message -->
+                <div
+                  *ngIf="form.interestRate.errors && form.interestRate.touched"
+                  class="msg-error"
+                >
+                  <mat-icon class="error-icon">error_outline</mat-icon>
+                  <span class="error-text"
+                    >The interest rate should be a numeric value, and it can be
+                    either a whole number or a number with decimal points.</span
+                  >
+                </div>
 
                 <!-- Number of Years input field -->
                 <mat-form-field appearance="fill">
@@ -74,15 +96,33 @@
                     required
                     name="txtNumYears"
                     id="txtNumYears"
+                    formControlName="numYears"
                     placeholder="ex. 30"
                     matInput
                   />
                 </mat-form-field>
 
+                <!-- Validation Error Message -->
+                <div
+                  *ngIf="form.numYears.errors && form.numYears.touched"
+                  class="msg-error"
+                >
+                  <mat-icon class="error-icon">error_outline</mat-icon>
+                  <span class="error-text"
+                    >The number of years should be a numeric value and it should
+                    not have any decimal points.</span
+                  >
+                </div>
                 <br />
-
                 <!-- Calculate button -->
-                <button type="submit" mat-raised-button color="accent">
+                <button
+                  class="mt-3 submitButton"
+                  type="submit"
+                  [disabled]="!loanForm.valid"
+                  mat-raised-button
+                  color="accent"
+                  (click)="calculate()"
+                >
                   Calculate
                 </button>
               </form>
@@ -97,18 +137,31 @@
             <mat-card-content>
               <form fxLayout="column">
                 <!-- Monthly payment result -->
-                <h1>Your monthly payment:</h1>
-                <h2>$0.00</h2>
-                <br />
-                <br />
+                <h1 class="mt-0">Your monthly payment:</h1>
+                <h2>
+                  <!-- Include the 'app-monthly-payment' component to display monthly payment -->
+                  <app-monthly-payment
+                    [monthlyPayment]="monthlyPayment"
+                  ></app-monthly-payment>
+                </h2>
                 <!-- Total interest paid result -->
-                <h1>Total interest paid:</h1>
-                <h2>$0.00</h2>
+                <h1 class="mt-5">Total interest paid:</h1>
+                <h2>
+                  <!-- Include the 'app-total-interest' component to display total interest -->
+                  <app-total-interest
+                    [totalInterest]="totalInterest"
+                  ></app-total-interest>
+                </h2>
               </form>
+              <!-- Clear Form button -->
+              <br />
+              <button class="mt-3 clearButton" mat-button (click)="clearForm()">
+                Clear Form
+              </button>
             </mat-card-content>
           </mat-card>
         </div>
       </div>
-    </mat-card-content></mat-card
-  >
+      <br /> </mat-card-content
+  ></mat-card>
 </div>

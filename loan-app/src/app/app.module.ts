@@ -28,6 +28,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MonthlyPaymentComponent } from './monthly-payment/monthly-payment.component';
+import { TotalInterestComponent } from './total-interest/total-interest.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +40,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     ContactUsComponent,
     HomeComponent,
     NotFoundComponent,
+    MonthlyPaymentComponent,
+    TotalInterestComponent,
   ],
   imports: [
     // Import and configure Angular and external modules
@@ -54,6 +59,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

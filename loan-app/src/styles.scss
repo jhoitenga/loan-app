@@ -1,6 +1,7 @@
 /* Importing the theme stylesheet */
 @import "_theme.scss";
 
+/* Importing Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
 
 * {
@@ -31,8 +32,8 @@ body {
   color: white;
 }
 
-.nav-link.router-link-active {
-  color: red !important;
+.navbar-brand:hover {
+  color: mat-color($custom-accent);
 }
 
 .page-title {
@@ -49,7 +50,7 @@ body {
 }
 
 .dk-brown-bg {
-  background-color: #706156;
+  background-color: mat-color($custom-primary);
 }
 
 h1 {
@@ -72,6 +73,7 @@ h3 {
 p {
   color: white;
   font-size: 16px !important;
+  line-height: 1.6;
 }
 
 .mat-form-field {
@@ -79,27 +81,34 @@ p {
 }
 
 .font-white {
-  color: white;
+  color: mat-color($custom-accent);
+  font-size: 20px !important;
 }
 
 input::placeholder {
-  color: white !important;
+  font-size: 20px;
 }
 
-button {
-  font-size: 18px !important;
+input {
+  font-size: 20px !important;
+}
+
+.submitButton {
+  font-size: 20px !important;
   letter-spacing: 0.75px;
   padding: 5px !important;
   font-weight: 600 !important;
 }
 
-button:hover {
-  background-color: white !important;
+.clearButton {
+  float: right;
 }
 
-.large-button {
-  font-size: 20px;
+.returnButton {
   padding: 16px 24px;
+  font-size: 20px !important;
+  letter-spacing: 0.75px;
+  font-weight: 600 !important;
 }
 
 .active .nav-link {
@@ -110,4 +119,39 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+form {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.msg-error {
+  margin: 5px 0;
+  padding: 10px;
+  color: #d8000c;
+  background-color: #ffd2d2;
+  display: flex;
+  align-items: center;
+  width: 98%;
+}
+
+.error-text {
+  margin-bottom: auto;
+}
+
+.error-icon {
+  font-size: 25px;
+  justify-content: flex-end;
+  margin-right: 2px;
+}
+
+.not-found {
+  font-size: 50px !important;
+  padding-bottom: 20px;
+  text-shadow: 2px 4px 2px mat-color($custom-primary);
+}
+
+.about {
+  margin-right: -10px !important;
 }

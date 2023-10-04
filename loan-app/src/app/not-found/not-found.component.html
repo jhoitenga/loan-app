@@ -10,19 +10,25 @@
   <!-- Main content wrapped in a mat-card -->
   <mat-card fxFlex class="mat-elevation-z0 brown-bg">
     <mat-card-title>
+      <!-- Page Not Found Title -->
+      <h1 class="not-found">Error 404 - Page Not Found</h1>
+
       <!-- Image container with attribution -->
       <div class="img-container">
         <figure style="display: inline-block">
-          <img src="./assets/not-found.jpg" />
+          <!-- Image source -->
+          <img src="./assets/not-found-badger.jpg" alt="Badger's Burrow" />
+
+          <!-- Image Attribution -->
           <figcaption class="text-center p-2">
             <small class="text-white" style="font-size: 40%">
-              <em>Image courtesy of &nbsp;</em>
+              <em>Image licensed from</em>&nbsp;
               <a
-                href="https://unsplash.com/photos/GvSLkDH7XdI"
+                href="https://www.istockphoto.com/photo/european-badgers-gm977064398-265675447?phrase=badger+burrow"
                 target="_blank"
                 class="text-light"
               >
-                Unsplash
+                Maciej Jaroszewski
               </a>
             </small>
           </figcaption>
@@ -36,7 +42,7 @@
       <br />
       <!-- Create a button with custom class for larger size with a router link to the home page -->
       <button
-        class="large-button"
+        class="returnButton"
         mat-raised-button
         color="accent"
         routerLink="/"
