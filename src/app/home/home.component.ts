@@ -6,6 +6,7 @@
  * Angular Tutorial for Beginners: Navigation and Layout with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=Wif3MsDN7Pg)
  * Angular Tutorial for Beginners: Data Tables with Angular Material video by Professor Krasso (https://www.youtube.com/watch?v=VvHoy5CtFIE)
  * WEB 425 Capstone Requirements Instructions
+ * How to Find Interest Rate: https://www.indeed.com/career-advice/career-development/how-to-find-interest-rate
  * Reset FormGroup https://angular.io/api/forms/FormGroup
  */
 
